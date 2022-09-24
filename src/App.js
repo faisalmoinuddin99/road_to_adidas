@@ -1,11 +1,21 @@
 import "./App.css";
-import Navbar from "./Navbar";
+import Navbar from "./components/Navbar";
 
+let customziseObjectForNavBar = {
+  title: "TextUitls",
+  about: "About-Me",
+  home: "My-Home",
+  site: "https://www.google.com/",
+};
 function App() {
   return (
     <div>
-      <Navbar></Navbar>
-      <h2 style={{ textAlign: "center" }}>Hello</h2>
+      <Navbar
+        title={customziseObjectForNavBar.title}
+        about={customziseObjectForNavBar.about}
+        home={customziseObjectForNavBar.home}
+        site={customziseObjectForNavBar.site}
+      />
     </div>
   );
 }

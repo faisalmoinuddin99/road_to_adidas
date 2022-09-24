@@ -1,22 +1,23 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div>
       <nav className="navbar bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="/" style={{ color: "white" }}>
-            TextUtils
+            {props.title}
           </a>
           <ul className="nav justify-content-end">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/">
-                Home
+                {props.home}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/">
-                About
+                {props.about}
               </a>
             </li>
           </ul>
@@ -37,4 +38,16 @@ const Navbar = () => {
   );
 };
 
+// setting props types
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  home: PropTypes.string.isRequired,
+  about: PropTypes.string,
+};
+
+Navbar.defaultProps = {
+  title: "Your Title Here...",
+  home: "Your Home Here...",
+  about: "Your About Here...",
+};
 export default Navbar;
