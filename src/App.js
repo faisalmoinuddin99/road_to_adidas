@@ -1,5 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import TextForm from "./components/TextForm";
 
 let customziseObjectForNavBar = {
   title: "TextUitls",
@@ -16,6 +17,9 @@ function App() {
         home={customziseObjectForNavBar.home}
         site={customziseObjectForNavBar.site}
       />
+      <div className="container">
+        <TextForm heading="Enter the text to analyze below" />
+      </div>
     </div>
   );
 }
